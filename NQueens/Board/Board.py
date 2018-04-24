@@ -59,7 +59,8 @@ class Board:
     
     def toString(self):
         """ Return a string representation of the board """
-        #ret ="_unusedX: "+str(self._unusedX)+os.linesep
+        ret=""
+        #ret+="_unusedX: "+str(self._unusedX)+os.linesep
         ret+="_queensX: "+str(self._queensX)+os.linesep
         ret+=self.queensToString()
         #ret+="diagTR:"+self._diagTR.toString()+os.linesep
