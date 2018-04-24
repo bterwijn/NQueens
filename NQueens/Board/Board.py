@@ -59,7 +59,8 @@ class Board:
     
     def toString(self):
         """ Return a string representation of the board """
-        ret ="queensX: "+str(self._queensX)+os.linesep
+        #ret ="_unusedX: "+str(self._unusedX)+os.linesep
+        ret+="_queensX: "+str(self._queensX)+os.linesep
         ret+=self.queensToString()
         #ret+="diagTR:"+self._diagTR.toString()+os.linesep
         #ret+="diagTL:"+self._diagTL.toString()+os.linesep
@@ -127,7 +128,7 @@ class Board:
                     break
         while len(tried)>0: # put back the tried elements minus x
             i=tried.popleft()
-            if not i==x:
+            if not i==bestX:
                 self._unusedX.append(i)
         return bestX
     
