@@ -1,7 +1,7 @@
 # Approach
 
 A queen on a chessboard threatens all positions on its horizontal,
-vertical and both diagonal lines as indicated in blue:
+vertical and both diagonal lines as indicated in blue.
 <img src="https://github.com/bterwijn/NQueens/blob/master/docs/1queen.png" height="400" >
 
 If a queen threatens a positions where another queen is on we speak of
@@ -17,11 +17,13 @@ height="400" >
 To simplify further we let each queen select its X coordinate from a
 set we call 'unusedX', where each coordinate can be used only
 once. As a result we rule out any vertical conflicts.
+
 <img src="https://github.com/bterwijn/NQueens/blob/master/docs/unusedXExample.png" height="400" >
 
-This way we reduce the statespace to all possible assignments of n queens to n Xs:
+This way we reduce the state-space to all possible assignments of n
+queens to n Xs:
 ```
-   statespace= n!
+   state-space(n) = n!
 ```
 
 As a result conflicts can only arrise on either the 'Top-Left' or

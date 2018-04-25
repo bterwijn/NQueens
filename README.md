@@ -5,6 +5,10 @@ size NxN such that no queen threatens another one.
 
 <img src="https://github.com/bterwijn/NQueens/blob/master/docs/solution.png" height="400" >
 
+[Approach](docs/Approach.md)
+[Design](docs/Design.md)
+[Code Quality](docs/CodeQuality.md)
+
 ## Files
 
 ```
