@@ -1,15 +1,17 @@
 
 from NQueens.Board.Board import *
 
-def randomize(board,tries=500):
-    """ Randomize a board. For each queen go over the next 'tries' elements 
-    in _unusedX and use the first x that results in the fewest possible conflicts."""
-    n=board.getN()
-    while not board.isDone():
-        if board.nrUnusedX()%10000==0: # print remaining unplaced queens to indicate progress
-            print("queens to be placed:",board.nrUnusedX())
-        x=board.sampleBestXForNextQueen(tries)
-        board.setNextQueen(x)
+class Random:
+
+    def randomize(board,tries=500):
+        """ Randomize a board. For each queen go over the next 'tries' elements 
+        in _unusedX and use the first x that results in the fewest possible conflicts."""
+        n=board.getN()
+        while not board.isDone():
+            if board.nrUnusedX()%10000==0: # print remaining unplaced queens to indicate progress
+                print("queens to be placed:",board.nrUnusedX())
+            x=board.sampleBestXForNextQueen(tries)
+            board.setNextQueen(x)
 
 if __name__ == "__main__":
     if len(sys.argv)<2:
@@ -20,7 +22,7 @@ if __name__ == "__main__":
     else:
         N=int(sys.argv[1])
         board=Board(N,randomizeUnusedX=True)
-        randomize(board)
+        Random.randomize(board)
         if len(sys.argv)>2:
             if sys.argv[2]=="p":
                 print(board.toString())
