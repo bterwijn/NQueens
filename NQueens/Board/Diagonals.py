@@ -15,12 +15,13 @@ class Diagonals:
         self._nrConflicts=0
         
     def _index(self,x,y):
-        """ Compute diagonal index for queen at coordinate (x,y). 
+        """ Compute diagonal index for queen with coordinate (x,y). 
             This function is to be overridden by subclasses. """
         return -1; # invalid index as placeholder
         
     def addQueen(self,x,y):
-        """ Add queen at coordinate (x,y) to the diagonals and update conflicts. """
+        """ Add queen at coordinate (x,y) to the associated diagonal and update 
+        conflicts. Return how many queens are on the diagonal afterwards. """
         i=self._index(x,y)
         length=len(self._diagonals[i])
         if length==1: # if conflict with 1 queen then add first queen too

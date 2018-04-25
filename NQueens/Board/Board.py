@@ -81,7 +81,8 @@ class Board:
         return ret
 
     def setQueen(self,q,x):
-        """ Set queen 'q' to X coordinate 'x'. """
+        """ Set queen 'q' to X coordinate 'x'. Return False if a conflict 
+        is created, True otherwise. """
         ret=True
         self._queensX[q]=x # set queen to x
         ret&=(self._diagTR.addQueen(x,q)==1)
@@ -89,12 +90,13 @@ class Board:
         return ret
 
     def setNextQueen(self,x):
-        """ Set the next queen to X coordinate 'x'. """
+        """ Set the next queen to X coordinate 'x'. Return False if a conflict 
+        is created, True otherwise. """
         self._queensX.append(-1) # append new element to queensX
         return self.setQueen(self.nrQueensSet()-1,x)
 
     def unsetQueen(self,q):
-        """ Unset queen 'q' from X coordinate 'x'. Return its x coordinate. """
+        """ Unset queen 'q' from X coordinate 'x'. Return the x coordinate. """
         x=self._queensX[q]  # remove from last queen
         self._queensX[q]=-1 # invalid value
         self._diagTR.removeQueen(x,q)
