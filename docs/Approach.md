@@ -8,10 +8,11 @@ If a queen threatens a positions where another queen is on we speak of
 a conflict.
 <img src="https://github.com/bterwijn/NQueens/blob/master/docs/2queensConflicts.png" height="400" >
 
-The aim is to find a position for all queens that doesn't result in a
-conflict. To simplify things we assign queen i to Y coordinate i to
-rule out any horizontal conflicts without loss of generality.
-<img src="https://github.com/bterwijn/NQueens/blob/master/docs/fixedYs.png" height="400" >
+The aim is to find a position for all queens that doesn't result in
+any conflict. To simplify things we assign queen i to Y coordinate i
+to rule out any horizontal conflicts without loss of generality.
+<img src="https://github.com/bterwijn/NQueens/blob/master/docs/fixedYs.png"
+height="400" >
 
 To simplify further we let each queen select its X coordinate from a
 set we call 'unusedX', where each coordinate can be used only
