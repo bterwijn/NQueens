@@ -3,7 +3,7 @@
 Solver for the N-Queens problem: Place N queens on a chessboard of
 size NxN such that no queen threatens another one.
 
-<img src="https://github.com/bterwijn/NQueens/docs/solution.png" align="left" height="400" >
+<img src="https://github.com/bterwijn/NQueens/blob/master/docs/solution.png" align="left" height="400" >
 
 ## Files
 
