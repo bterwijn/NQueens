@@ -25,5 +25,4 @@ This way we reduce the statespace to all possible assignments of n queens to n X
 
 As a result conflicts can only arrise on either the 'Top-Left' or
 'Top-Right' diagonals.
-<img src="https://github.com/bterwijn/NQueens/blob/master/docs/DiagonalsTopLeft.png" height="400" >
-<img src="https://github.com/bterwijn/NQueens/blob/master/docs/DiagonalsTopRight.png" height="400" >
+<img src="https://github.com/bterwijn/NQueens/blob/master/docs/Diagonals.png" height="400" >
