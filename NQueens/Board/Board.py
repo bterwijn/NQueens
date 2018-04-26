@@ -82,16 +82,15 @@ class Board:
 
     def setQueen(self,q,x):
         """ Set queen 'q' to X coordinate 'x'. """
-        ret=True
         self._queensX[q]=x # set queen to x
-        ret&=(self._diagTR.addQueen(x,q)==1)
-        ret&=(self._diagTL.addQueen(x,q)==1)
-        return ret
+        noConflictTR=self._diagTR.addQueen(x,q)
+        noConflictTL=self._diagTL.addQueen(x,q)
+        return noConflictTR and noConflictTL
 
     def setNextQueen(self,x):
         """ Set the next queen to X coordinate 'x'. """
         self._queensX.append(-1) # append new element to queensX
-        return self.setQueen(self.nrQueensSet()-1,x)
+        return self.setQueen(self.nrQueensSet()-1,x) # use setQueen() to set its value
 
     def unsetQueen(self,q):
         """ Unset queen 'q' from X coordinate 'x'. Return its x coordinate. """

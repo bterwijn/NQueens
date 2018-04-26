@@ -8,6 +8,7 @@ class HillClimber:
         """ Hill climb a board with all queens set until all conflicts are removed. Each steps 
         select a conflict queen and swaps its x coordinate with a random other queen. Stop 
         when after 'maxSteps' (default: 1000000) step conflicts remain. """
+        Random.randomize(board) # start with randomize board
         nrConflictsRemaining=board.getNrConflicts()
         print("nrConflicts after randomization:",nrConflictsRemaining)
         step=0
@@ -41,7 +42,6 @@ if __name__ == "__main__":
     else:
         N=int(sys.argv[1])
         board=Board(N,randomizeUnusedX=True)
-        Random.randomize(board)
         if HillClimber.hillClimber(board): # if all conflicts solved
             if len(sys.argv)>2:
                 if sys.argv[2]=="p":

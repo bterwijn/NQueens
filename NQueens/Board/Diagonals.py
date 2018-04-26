@@ -20,7 +20,8 @@ class Diagonals:
         return -1; # invalid index as placeholder
         
     def addQueen(self,x,y):
-        """ Add queen at coordinate (x,y) to the diagonals and update conflicts. """
+        """ Add queen at coordinate (x,y) to the diagonals and update conflicts. 
+        Return True when adding didn't result in a conflict """
         i=self._index(x,y)
         length=len(self._diagonals[i])
         if length==1: # if conflict with 1 queen then add first queen too
@@ -31,7 +32,7 @@ class Diagonals:
         if length>1:
             self._conflictQueens.add(y)
             self._nrConflicts+=1
-        return len(self._diagonals[i])
+        return len(self._diagonals[i])==1 # True if only one queen is on this diagonal
 
     def removeQueen(self,x,y):
         """ Remove queen at coordinate (x,y) to the diagonals and update conflicts. """

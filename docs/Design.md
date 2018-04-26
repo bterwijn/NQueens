@@ -1,22 +1,21 @@
 # Design
 
-We make a design for our software. A design helps us to communicate
-and think our choices through before we deal with the implementation
-details of the programming language.
-
-We choose to use 3 algorithms for which we write pseudo code:
+A design helps us to communicate and think our choices through before
+we deal with the implementation details of the programming
+language. The design consists of 3 different algorithms for which we
+write pseudo code:
 
 * Random
 * Depth First
 * Hill Climber
 
-
 ## Random
 
 The Random algorithm will for the current queen try many random x
 coordinates from the unusedX set and will use the x coordinate that
-resuts in the fewest number of conflicts. Then it will repeat this for
-the next queen until all queens are set.
+results in the fewest number of conflicts. Then it will repeat this
+for the next queen until all queens are set. This may produce a
+solution with conflicts.
 
 ```
 randomize( board )
@@ -40,7 +39,8 @@ getBestXForNextQUeen( board , nrTries )
 
 The Depth First algorithm will for the current queen try each x from
 the unusedX set. If no conflict occurs it will move on recursively to
-the next queen until all queens are set.
+the next queen until all queens are set. This will produce all
+possible solutions with no conflicts.
 
 ```
 depthFirst( board )
@@ -59,8 +59,9 @@ depthFirst( board )
 The Hill Climber algorithm starts with a randomized board. It will
 randomly select a queen that causes a conflict and randomly select an
 arbitrary queen. It will then swap the X coordinates of these two
-queens. If the number of conficts gets worse it will swap them
-back. This is repeated until all conflicts are resolved.
+queens in the hope of removing a conflict. If the number of conficts
+gets worse it will swap them back. This is repeated until all
+conflicts are resolved.
 
 ```
 hillClimber( board )
