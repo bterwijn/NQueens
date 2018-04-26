@@ -27,6 +27,6 @@ queens to n Xs:
    state-space(n) = n!
 ```
 
-As a result conflicts can only occur on either the 'Top-Left' or
-'Top-Right' diagonals.
+Conflicts can now only occur on either the 'Top-Left' or 'Top-Right'
+diagonals.
 <img src="https://github.com/bterwijn/NQueens/blob/master/docs/Diagonals.png" height="400" >
