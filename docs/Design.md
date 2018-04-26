@@ -22,6 +22,7 @@ randomize( board )
    while not board.allQueensSet()
       x = getBestXForNextQUeen(board,500)
       board.setNextQueen(x)
+   print( "SOLUTION: ", board )
 
 getBestXForNextQUeen( board , nrTries )
     bestX = -1
@@ -44,8 +45,8 @@ possible solutions with no conflicts.
 
 ```
 depthFirst( board )
-    if board.isDone()
-        print( "solution: ", board )
+    if board.allQueensSet()
+        print( "SOLUTION: ", board )
     else
         try all remaining x values in board.unusedX
             board.setNextQueen( x )
@@ -74,4 +75,5 @@ hillClimber( board )
        nrConflicts2 = board.getNrConflicts()
        if nrConflicts2 > nrConflicts1
            board.swap( q1 , q2 )
+   print( "SOLUTION: ", board )
 ```

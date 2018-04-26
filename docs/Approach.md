@@ -15,8 +15,8 @@ to rule out any horizontal conflicts without loss of generality.
 height="400" >
 
 To simplify further we let each queen select its X coordinate from a
-set we call 'unusedX', where each coordinate can be used only
-once. As a result we rule out any vertical conflicts.
+set we call 'unusedX', from which each coordinate can be used only
+once. As a result we rule out any vertical conflicts too.
 
 <img src="https://github.com/bterwijn/NQueens/blob/master/docs/unusedXExample.png" height="400" >
 
@@ -26,6 +26,6 @@ queens to n Xs:
    state-space(n) = n!
 ```
 
-As a result conflicts can only arrise on either the 'Top-Left' or
+As a result conflicts can only occur on either the 'Top-Left' or
 'Top-Right' diagonals.
 <img src="https://github.com/bterwijn/NQueens/blob/master/docs/Diagonals.png" height="400" >
