@@ -9,8 +9,9 @@ a conflict.
 <img src="https://github.com/bterwijn/NQueens/blob/master/docs/2queensConflicts.png" height="400" >
 
 The aim is to find a position for all queens that doesn't result in
-any conflict. To simplify things we assign queen i to Y coordinate i
-to rule out any horizontal conflicts without loss of generality.
+any conflict. To simplify things we assign a unique Y coordinate to
+each queen. This rules out any horizontal conflicts without loss of
+generality.
 <img src="https://github.com/bterwijn/NQueens/blob/master/docs/fixedYs.png"
 height="400" >
 
