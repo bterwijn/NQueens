@@ -83,17 +83,16 @@ class Board:
     def setQueen(self,q,x):
         """ Set queen 'q' to X coordinate 'x'. Return False if a conflict 
         is created, True otherwise. """
-        ret=True
         self._queensX[q]=x # set queen to x
-        ret&=(self._diagTR.addQueen(x,q)==1)
-        ret&=(self._diagTL.addQueen(x,q)==1)
-        return ret
+        noConflictTR=self._diagTR.addQueen(x,q)
+        noConflictTL=self._diagTL.addQueen(x,q)
+        return noConflictTR and noConflictTL
 
     def setNextQueen(self,x):
         """ Set the next queen to X coordinate 'x'. Return False if a conflict 
         is created, True otherwise. """
         self._queensX.append(-1) # append new element to queensX
-        return self.setQueen(self.nrQueensSet()-1,x)
+        return self.setQueen(self.nrQueensSet()-1,x) # use setQueen() to set its value
 
     def unsetQueen(self,q):
         """ Unset queen 'q' from X coordinate 'x'. Return the x coordinate. """
@@ -108,34 +107,8 @@ class Board:
         x=self.unsetQueen(self.nrQueensSet()-1)
         self._queensX.pop() # remove last from queensX
         return x
-
-    def sampleBestXForNextQueen(self,tries):
-        """ Return x position for the next queen. Go over the next 'tries' elements 
-        in _unusedX and return the first x that results in the fewest possible conflicts. """
-        if tries>self.nrUnusedX():
-            tries=self.nrUnusedX()
-        startNrConflicts=self.getNrConflicts()
-        bestNrConflicts=sys.maxsize
-        bestX=-1
-        tried=deque()
-        for i in range(tries):
-            x=self._unusedX.popleft() # remove arbitrary element from deque but,
-            tried.append(x)        # remember it to put it back later
-            self.setNextQueen(x)
-            nrConflicts=self.getNrConflicts()
-            self.unsetLastQueen()
-            if nrConflicts<bestNrConflicts:
-                bestNrConflicts=nrConflicts
-                bestX=x
-                if nrConflicts==startNrConflicts: # zero additional conflict, can't improve so break
-                    break
-        while len(tried)>0: # put back the tried elements minus x
-            i=tried.popleft()
-            if not i==bestX:
-                self._unusedX.append(i)
-        return bestX
     
-    def isDone(self):
+    def allQueensSet(self):
         """ Check if all queens are on the board. """
         return self.nrQueensSet()==self._n
 

@@ -5,7 +5,7 @@ class DepthFirst:
 
     def depthFirstRecursive(board):
         """ Recursive Depth First Search algorithm. """
-        if board.isDone(): # recursive stop condition
+        if board.allQueensSet(): # recursive stop condition
             print("***** FOUND SOLUTION:")
             print(board.toString())
         else:
