@@ -85,17 +85,18 @@ the following classes:
 
 * Random, the random algorithm
 * DepthFirst, the depth-first algorithm
-* HillClimber, the hill-climbing algorithm
+* HillClimber, the hill-climber algorithm
 * Board, represents the board and positions of queens
 * DiagonalsTopLeft, represents queens and conflicts on the top-left diagonals
 * DiagonalsTopRight, represents queens and conflicts on the top-right diagonals
-* Diagonals, 
+* Diagonals, logic for efficient conflict checking
 
 The relation between these classes can be represented in an UML class
-diagram.
+diagram with the algorithms in pink and the representations of the
+state (datastructure) in blue.
 
 <img src="https://github.com/bterwijn/NQueens/blob/master/docs/umletino.png">
 
-For which this is the legend.
+For which the legend is:
 
 <img src="https://github.com/bterwijn/NQueens/blob/master/docs/umlLegend.png">
