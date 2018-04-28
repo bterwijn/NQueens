@@ -6,7 +6,7 @@ _queensX : list[ x ]
 _unusedX : deque[ x ]
 --
 getUnusedX() : _unusedX
-setQueen(q,x) : makesConflict
+setQueen(q,x) : causesConflict?
 unsetQueen(q) : x
 getNrConflicts() : nrConflicts</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>460</y><w>210</w><h>170</h></coordinates><panel_attributes>Diagonals
 bg=blue

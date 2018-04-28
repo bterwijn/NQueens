@@ -91,9 +91,9 @@ the following classes:
 * DiagonalsTopRight, represents queens and conflicts on the top-right diagonals
 * Diagonals, logic for efficient conflict checking
 
-The relation between these classes can be represented in an UML class
-diagram with the algorithms in pink and the representations of the
-state (datastructure) in blue.
+The relation between these classes can be represented in an informal
+UML class diagram with the algorithms in pink and the representation
+of the state (datastructure) in blue.
 
 <img src="https://github.com/bterwijn/NQueens/blob/master/docs/umletino.png">
 
