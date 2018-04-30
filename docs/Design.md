@@ -77,3 +77,26 @@ hillClimber( board )
            board.swap( q1 , q2 )
    print( "SOLUTION: " , board )
 ```
+
+## Classes
+
+Based on the pseudo code above we choose to decompose the software in
+the following classes:
+
+* Random, the random algorithm
+* DepthFirst, the depth-first algorithm
+* HillClimber, the hill-climber algorithm
+* Board, represents the board and positions of queens
+* DiagonalsTopLeft, represents queens and conflicts on the top-left diagonals
+* DiagonalsTopRight, represents queens and conflicts on the top-right diagonals
+* Diagonals, logic for efficient conflict checking
+
+The relation between these classes can be represented in an informal
+UML class diagram with the algorithms in pink and the representation
+of the state (datastructure) in blue.
+
+<img src="https://github.com/bterwijn/NQueens/blob/master/docs/umletino.png">
+
+For which the legend is:
+
+<img src="https://github.com/bterwijn/NQueens/blob/master/docs/umlLegend.png">
