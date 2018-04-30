@@ -133,20 +133,20 @@ class Board:
             self.setQueen(q1,x2)
             self.setQueen(q2,x1)
 
-    def getRandomConflictQueen(board):
-        """ Get a random conflict queen from diagonals """
+    def getRandomConflictQueen(self):
+        """ Get a random conflict queen from the top-left or top-right diagonals """
         c=[]
-        c1=board.getDiagonalsTopLeft() .getConflictQueens()
+        c1=self._diagTL.getConflictQueens()
         if len(c1)>0:
             c.append(c1)
-        c2=board.getDiagonalsTopRight().getConflictQueens()
+        c2=self._diagTR.getConflictQueens()
         if len(c2)>0:
             c.append(c2)
-        q=-1
+        q=-1 # invalid index to indicate there are no conflict queens
         if len(c)>0:
             #print("conflicts: ",c1,c2)
-            conflictSet=random.sample(c,1)[0]
-            q=random.sample(conflictSet,1)[0]
+            conflictSet=random.sample(c,1)[0] # choose between top-left or top-right if both have conflicts
+            q=random.sample(conflictSet,1)[0] # random sample one from the set of conflicts
         return q
     
     def saveQueensXs(self,filename):
