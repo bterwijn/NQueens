@@ -67,7 +67,7 @@ Board and Diagonals classes.
 
 Exposing the details of how the Diagonal class [keeps track of the
 number of
-conflicts](https://github.com/bterwijn/NQueens/blob/master/NQueens/Board/Board.py#L83)
+conflicts](https://github.com/bterwijn/NQueens/blob/master/NQueens/Board/Diagonals.py#L22)
 to the Board class is not a good idea. If the Board class would use
 these details it would get more complex and the chance of making
 mistakes would be higher. In addition we would not be able to change
@@ -78,7 +78,7 @@ function to add a queen and
 [Diagonals.getNrConflicts()](https://github.com/bterwijn/NQueens/blob/master/NQueens/Board/Board.py#L126)
 and
 [Diagonals.getConflictQueens()](https://github.com/bterwijn/NQueens/blob/master/NQueens/Board/Board.py#L139)
-to get the desired conflict information.
+to get the desired conflict information via the interface.
 
 ## Duplicate code
 
