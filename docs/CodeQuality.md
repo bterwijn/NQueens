@@ -38,10 +38,11 @@ or function behind an interface so the complexity is hidden.
 
 You could say the interface of a car is it's steering wheel, pedals
 and gear shifter. When you drive your car you do not think about the
-detais of how the fuel in the engine moves the pistons and through the
-transmission rotates the wheels. An automatic car, that doesn't have a
-gear shift, has a higher level of abstraction, and a self driving car
-an even higher level as more and more detail are hidden away.
+details of how the fuel in the engine moves the pistons and through
+the transmission rotates the wheels. An automatic car, that doesn't
+have a gear shifter, has a higher level of abstraction, and a self
+driving car an even higher level as more and more detail are hidden
+away making it easier to use it.
 
 Abstraction in combination with modularity allows to have different
 levels of abstraction in the software. Modules at the top only deal
@@ -70,7 +71,7 @@ fix but introduces unecessary lines of code that makes the software
 more complex and is likely to cause complications when later changes
 are required. In these cases it is better to identify what logic you
 want to reuse and move that logic to a function that can then be
-called from wherever the logic is wanted.
+called from wherever the logic is needed.
 
 As an example the Hill Climber algorithm wants to start with a
 randomized state. To get to a randomized state we don't copy software
