@@ -3,7 +3,7 @@
 A design helps us to communicate and think our choices through before
 we deal with the implementation details of the programming
 language. The design consists of 3 different algorithms for which we
-write pseudo code:
+write pseudo code to get a idea how each could be implemented:
 
 * Random
 * Depth First
@@ -100,3 +100,8 @@ of the state (datastructure) in blue.
 For which the legend is:
 
 <img src="https://github.com/bterwijn/NQueens/blob/master/docs/umlLegend.png">
+
+Having used the design to plan the high-level structure of the source
+code, we can now start writing it and deal with all the implementation
+details. We can simply go back and change the design when we learn
+more about the problem and discover it should be changed.

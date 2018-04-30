@@ -60,7 +60,7 @@ detail as possible.
 
 <img src="https://github.com/bterwijn/NQueens/blob/master/docs/AbstractionHierarchy.png">
 
-An example of this hierarchy from top to bottom are the Algorithm,
+An example of such an hierarchy are from top to bottom the Algorithm,
 Board and Diagonals classes.
 
 ### Counter example
